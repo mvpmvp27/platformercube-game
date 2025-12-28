@@ -1,0 +1,25 @@
+# .pre-commit-config.yaml
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: check-ast                 # Проверка корректности синтаксиса Python
+      - id: trailing-whitespace       # Удаление пробелов в конце строк
+      - id: end-of-file-fixer         # Добавление \n в конец файла
+      - id: check-yaml                # Проверка этого .yaml-файла
+      - id: check-json                # (На будущее) если появятся .json
+      - id: debug-statements          # Блокировка pdb / print в продакшене
+      - id: check-added-large-files   # Не даёт закоммитить случайно большие файлы
+
+  - repo: https://github.com/psf/black
+    rev: 24.10.0
+    hooks:
+      - id: black
+        language_version: python3
+
+  - repo: https://github.com/pycqa/flake8
+    rev: 7.1.1
+    hooks:
+      - id: flake8
+        additional_dependencies:
+          - flake8-bugbear
