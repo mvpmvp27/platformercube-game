@@ -70,4 +70,5 @@ class Player:
         pygame.draw.circle(screen, WHITE, (self.x + 12, self.y + 14), eye_size)
         pygame.draw.circle(screen, WHITE, (self.x + 28, self.y + 14), eye_size)
         pygame.draw.circle(screen, BLACK, (self.x + 12, self.y + 14), eye_size // 2)
+
         pygame.draw.circle(screen, BLACK, (self.x + 28, self.y + 14), eye_size // 2)
